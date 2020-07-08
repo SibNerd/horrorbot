@@ -13,11 +13,12 @@ def create_model():
     return text_model
 
 def create_text(model):
-    # lenght = random.randint(1, 2)
-    # for i in range(lenght):
-    sentence = generator.generate_random_sentence(model)
-    # total_text.append(sentence)
-    return sentence
+    total_text = []
+    lenght = random.randint(1, 5)
+    for i in range(lenght):
+        sentence = generator.generate_random_sentence(model)
+        total_text.append(sentence)
+    return total_text
 
 """
 # writing generated text
