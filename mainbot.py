@@ -13,7 +13,7 @@ def send_welcome(message):
 @bot.message_handler(commands=['story'])
 def tell_story(message):
     story = textmaker.create_text(model)
-    bot.reply_to(message, story)
+    bot.send_message(message.chat.id, story)
 
 @bot.message_handler(commands=['help'])
 @bot.message_handler(regexp='умеешь')
